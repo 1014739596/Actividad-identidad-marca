@@ -1,0 +1,1284 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --green: #0B5D3B;
+    --green-dark: #063B28;
+
+    --yellow: #F5C542;
+
+    --black: #101513;
+
+    --cream: #F4F2EA;
+
+    --gray: #68736D;
+
+    --white: #FFFFFF;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--black);
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-weight: 800;
+
+}
+
+
+p {
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    padding: 20px 0;
+
+    transition: .4s;
+
+    z-index: 1000;
+
+}
+
+
+.navbar.scrolled {
+
+    background: rgba(6, 59, 40, .96);
+
+    backdrop-filter: blur(15px);
+
+    padding: 12px 0;
+
+}
+
+
+.navbar-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white !important;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logo-small {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    font-weight: 900;
+
+    border-radius: 50%;
+
+}
+
+
+.nav-link {
+
+    color: white !important;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-left: 20px;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--yellow) !important;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(245,197,66,.25),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            125deg,
+            #041d14,
+            var(--green),
+            var(--green-dark)
+        );
+
+    color: white;
+
+}
+
+
+.hero-background {
+
+    position: absolute;
+
+    width: 800px;
+
+    height: 800px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+
+    right: -250px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.section-tag {
+
+    display: block;
+
+    color: var(--yellow);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-tag.dark {
+
+    color: var(--green);
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(55px, 8vw, 120px);
+
+    line-height: .86;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+
+}
+
+
+.hero p {
+
+    max-width: 600px;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.btn-main {
+
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    border-radius: 50px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+
+.btn-main:hover {
+
+    background: white;
+
+    color: var(--green);
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero-ball {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.ball {
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 150px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(245,197,66,.4);
+
+    box-shadow: 0 0 100px rgba(245,197,66,.12);
+
+}
+
+
+.hero-ball span {
+
+    margin-top: 20px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+    color: var(--yellow);
+
+}
+
+
+.hero-number {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 5%;
+
+    font-family: 'Oswald';
+
+    color: rgba(255,255,255,.5);
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+    padding: 130px 0;
+
+    position: relative;
+
+}
+
+
+.light {
+
+    background: var(--cream);
+
+}
+
+
+.dark {
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+.yellow {
+
+    background: var(--yellow);
+
+}
+
+
+.section-number {
+
+    font-family: 'Oswald';
+
+    font-size: 15px;
+
+    color: var(--yellow);
+
+    margin-bottom: 50px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.light .section-number,
+.yellow .section-number {
+
+    color: var(--green);
+
+}
+
+
+.section h2 {
+
+    font-size: clamp(45px, 6vw, 90px);
+
+    line-height: .95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section h2 span {
+
+    color: var(--green);
+
+}
+
+
+.dark h2 span {
+
+    color: var(--yellow);
+
+}
+
+
+.lead {
+
+    font-size: 21px;
+
+    color: var(--gray);
+
+}
+
+
+/* =====================================================
+   IDENTIDAD
+===================================================== */
+
+.identity-card {
+
+    background: white;
+
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+.identity-logo {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: var(--yellow);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 65px;
+
+    font-weight: 900;
+
+    border: 8px solid var(--yellow);
+
+}
+
+
+.identity-card h3 {
+
+    margin-top: 25px;
+
+    font-size: 40px;
+
+}
+
+
+.identity-card p {
+
+    color: var(--gray);
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+
+    margin-top: 70px;
+
+    border-left: 2px solid rgba(245,197,66,.5);
+
+    padding-left: 45px;
+
+}
+
+
+.timeline-item {
+
+    margin-bottom: 55px;
+
+    position: relative;
+
+    max-width: 800px;
+
+}
+
+
+.timeline-item::before {
+
+    content: '';
+
+    position: absolute;
+
+    left: -54px;
+
+    top: 5px;
+
+    width: 15px;
+
+    height: 15px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+}
+
+
+.timeline-item span {
+
+    color: var(--yellow);
+
+    font-family: 'Oswald';
+
+    font-size: 20px;
+
+}
+
+
+.timeline-item h3 {
+
+    font-size: 35px;
+
+    margin: 10px 0;
+
+}
+
+
+.timeline-item p {
+
+    color: rgba(255,255,255,.6);
+
+}
+
+
+/* =====================================================
+   PURPOSE
+===================================================== */
+
+.purpose-card {
+
+    padding: 55px;
+
+    background: white;
+
+    min-height: 350px;
+
+    border-top: 5px solid var(--green);
+
+}
+
+
+.green-card {
+
+    background: var(--green);
+
+    color: white;
+
+    border-color: var(--yellow);
+
+}
+
+
+.purpose-card small {
+
+    color: var(--green);
+
+    font-family: 'Oswald';
+
+    font-size: 18px;
+
+}
+
+
+.green-card small {
+
+    color: var(--yellow);
+
+}
+
+
+.purpose-card h3 {
+
+    font-size: 40px;
+
+    margin: 30px 0;
+
+}
+
+
+.purpose-card p {
+
+    color: var(--gray);
+
+}
+
+
+.green-card p {
+
+    color: rgba(255,255,255,.7);
+
+}
+
+
+/* =====================================================
+   PERSONALIDAD
+===================================================== */
+
+.personality {
+
+    border-top: 2px solid var(--black);
+
+    padding-top: 20px;
+
+}
+
+
+.personality strong {
+
+    font-family: 'Oswald';
+
+    font-size: 18px;
+
+}
+
+
+.personality h3 {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+}
+
+
+.personality p {
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   VALUES
+===================================================== */
+
+.values {
+
+    margin-top: 70px;
+
+    border-top: 1px solid #333;
+
+    border-left: 1px solid #333;
+
+}
+
+
+.value {
+
+    padding: 45px;
+
+    min-height: 230px;
+
+    border-right: 1px solid #333;
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+.value span {
+
+    color: var(--yellow);
+
+    font-family: 'Oswald';
+
+}
+
+
+.value h3 {
+
+    margin-top: 25px;
+
+    font-size: 32px;
+
+}
+
+
+.value p {
+
+    color: rgba(255,255,255,.6);
+
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+.color-grid {
+
+    margin-top: 50px;
+
+}
+
+
+.color {
+
+    height: 330px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+.color h3 {
+
+    margin: 0;
+
+}
+
+
+.color p {
+
+    margin: 5px 0 0;
+
+}
+
+
+.green {
+
+    background: var(--green);
+
+    color: white;
+
+}
+
+
+.yellow-color {
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+}
+
+
+.black {
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.typography {
+
+    background: white;
+
+}
+
+
+.montserrat {
+
+    font-family: 'Montserrat';
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    margin: 0;
+
+}
+
+
+.oswald {
+
+    font-family: 'Oswald';
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    margin: 0;
+
+}
+
+
+.alphabet {
+
+    font-size: 80px;
+
+    font-weight: 800;
+
+}
+
+
+.alphabet span {
+
+    font-size: 13px;
+
+    color: var(--gray);
+
+}
+
+
+.numbers {
+
+    font-family: 'Oswald';
+
+    font-size: 45px;
+
+    color: var(--green);
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo-box {
+
+    background: var(--green);
+
+    color: white;
+
+    padding: 70px;
+
+    text-align: center;
+
+}
+
+
+.big-logo {
+
+    width: 200px;
+
+    height: 200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--yellow);
+
+    color: var(--green);
+
+    border-radius: 50%;
+
+    font-size: 75px;
+
+    font-weight: 900;
+
+}
+
+
+.logo-box strong {
+
+    display: block;
+
+    font-size: 50px;
+
+    margin-top: 25px;
+
+}
+
+
+.logo-box span {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logo-rules {
+
+    margin-top: 30px;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.logo-rules li {
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   APPLICATIONS
+===================================================== */
+
+.applications {
+
+    background: var(--green-dark);
+
+    color: white;
+
+}
+
+
+.application-card {
+
+    height: 430px;
+
+    padding: 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.jersey {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+}
+
+
+.shirt-logo {
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: var(--yellow);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+    font-weight: 900;
+
+    border: 5px solid var(--yellow);
+
+}
+
+
+.jersey h3 {
+
+    font-size: 35px;
+
+}
+
+
+.social {
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.social h3 {
+
+    font-size: 45px;
+
+    line-height: .9;
+
+    margin: 25px 0;
+
+}
+
+
+.poster {
+
+    background: var(--black);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+}
+
+
+.poster-logo {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 30px;
+
+    width: 100px;
+
+    height: 100px;
+
+    background: var(--yellow);
+
+    color: var(--green);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 900;
+
+    font-size: 35px;
+
+}
+
+
+.poster h3 {
+
+    font-size: 45px;
+
+    line-height: .9;
+
+}
+
+
+.footer-brand {
+
+    margin-top: 100px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+}
+
+
+.footer-brand strong {
+
+    display: block;
+
+    font-size: 40px;
+
+}
+
+
+.footer-brand span {
+
+    color: var(--yellow);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 25px 0;
+
+    background: #041d14;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .nav-link {
+
+        margin: 8px 0;
+
+    }
+
+
+    .hero {
+
+        padding: 130px 0 80px;
+
+    }
+
+
+    .hero-ball {
+
+        margin-top: 70px;
+
+    }
+
+
+    .ball {
+
+        width: 220px;
+
+        height: 220px;
+
+        font-size: 110px;
+
+    }
+
+
+    .section {
+
+        padding: 90px 0;
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero h1 {
+
+        font-size: 55px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .section h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .purpose-card {
+
+        padding: 35px;
+
+    }
+
+
+    .color {
+
+        height: 220px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .application-card {
+
+        height: 350px;
+
+    }
+
+}
